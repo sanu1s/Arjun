@@ -1,0 +1,148 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627148325.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "firstName",
+    "lastName",
+    "gender",
+    "age",
+    "address",
+    "phoneNumbers"
+  ],
+  "properties": {
+    "firstName": {
+      "$id": "#root/firstName",
+      "title": "Firstname",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Rack"
+      ],
+      "pattern": "^.*$"
+    },
+    "lastName": {
+      "$id": "#root/lastName",
+      "title": "Lastname",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Jackon"
+      ],
+      "pattern": "^.*$"
+    },
+    "gender": {
+      "$id": "#root/gender",
+      "title": "Gender",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "man"
+      ],
+      "pattern": "^.*$"
+    },
+    "age": {
+      "$id": "#root/age",
+      "title": "Age",
+      "type": "integer",
+      "examples": [
+        24
+      ],
+      "default": 0
+    },
+    "address": {
+      "$id": "#root/address",
+      "title": "Address",
+      "type": "object",
+      "required": [
+        "streetAddress",
+        "city",
+        "state",
+        "postalCode"
+      ],
+      "properties": {
+        "streetAddress": {
+          "$id": "#root/address/streetAddress",
+          "title": "Streetaddress",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "126"
+          ],
+          "pattern": "^.*$"
+        },
+        "city": {
+          "$id": "#root/address/city",
+          "title": "City",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "San Jone"
+          ],
+          "pattern": "^.*$"
+        },
+        "state": {
+          "$id": "#root/address/state",
+          "title": "State",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "CA"
+          ],
+          "pattern": "^.*$"
+        },
+        "postalCode": {
+          "$id": "#root/address/postalCode",
+          "title": "Postalcode",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "394221"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+  ,
+    "phoneNumbers": {
+      "$id": "#root/phoneNumbers",
+      "title": "Phonenumbers",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/phoneNumbers/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "type",
+          "number"
+        ],
+        "properties": {
+          "type": {
+            "$id": "#root/phoneNumbers/items/type",
+            "title": "Type",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "home"
+            ],
+            "pattern": "^.*$"
+          },
+          "number": {
+            "$id": "#root/phoneNumbers/items/number",
+            "title": "Number",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "7383627627"
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    }
+  }
+}

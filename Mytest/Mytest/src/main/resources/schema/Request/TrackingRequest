@@ -1,0 +1,396 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627331018.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "OrderNumber",
+    "ReceivedOn",
+    "UTCReceivedOn",
+    "EstimatedDeliveryDate",
+    "Origin",
+    "Destination",
+    "Pieces",
+    "Events"
+  ],
+  "properties": {
+    "OrderNumber": {
+      "$id": "#root/OrderNumber",
+      "title": "Ordernumber",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "NJMDVA90191310"
+      ],
+      "pattern": "^.*$"
+    },
+    "ReceivedOn": {
+      "$id": "#root/ReceivedOn",
+      "title": "Receivedon",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2021-07-16T06:55:32"
+      ],
+      "pattern": "^.*$"
+    },
+    "UTCReceivedOn": {
+      "$id": "#root/UTCReceivedOn",
+      "title": "Utcreceivedon",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2021-07-16T10:55:32"
+      ],
+      "pattern": "^.*$"
+    },
+    "EstimatedDeliveryDate": {
+      "$id": "#root/EstimatedDeliveryDate",
+      "title": "Estimateddeliverydate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2021-07-24"
+      ],
+      "pattern": "^.*$"
+    },
+    "Origin": {
+      "$id": "#root/Origin",
+      "title": "Origin",
+      "type": "object",
+      "required": [
+        "City",
+        "State",
+        "PostalCode",
+        "Country"
+      ],
+      "properties": {
+        "City": {
+          "$id": "#root/Origin/City",
+          "title": "City",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "INDIANAPOLIS"
+          ],
+          "pattern": "^.*$"
+        },
+        "State": {
+          "$id": "#root/Origin/State",
+          "title": "State",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "IN"
+          ],
+          "pattern": "^.*$"
+        },
+        "PostalCode": {
+          "$id": "#root/Origin/PostalCode",
+          "title": "Postalcode",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "46241"
+          ],
+          "pattern": "^.*$"
+        },
+        "Country": {
+          "$id": "#root/Origin/Country",
+          "title": "Country",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "US"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+  ,
+    "Destination": {
+      "$id": "#root/Destination",
+      "title": "Destination",
+      "type": "object",
+      "required": [
+        "City",
+        "State",
+        "PostalCode",
+        "Country"
+      ],
+      "properties": {
+        "City": {
+          "$id": "#root/Destination/City",
+          "title": "City",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "LAKE WORTH"
+          ],
+          "pattern": "^.*$"
+        },
+        "State": {
+          "$id": "#root/Destination/State",
+          "title": "State",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "FL"
+          ],
+          "pattern": "^.*$"
+        },
+        "PostalCode": {
+          "$id": "#root/Destination/PostalCode",
+          "title": "Postalcode",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "33460"
+          ],
+          "pattern": "^.*$"
+        },
+        "Country": {
+          "$id": "#root/Destination/Country",
+          "title": "Country",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "US"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+  ,
+    "Pieces": {
+      "$id": "#root/Pieces",
+      "title": "Pieces",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/Pieces/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "TrackingNumber",
+          "Weight",
+          "WeightUnit"
+        ],
+        "properties": {
+          "TrackingNumber": {
+            "$id": "#root/Pieces/items/TrackingNumber",
+            "title": "Trackingnumber",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "SAMPLETRACKING"
+            ],
+            "pattern": "^.*$"
+          },
+          "Weight": {
+            "$id": "#root/Pieces/items/Weight",
+            "title": "Weight",
+            "type": "number",
+            "examples": [
+              2.58
+            ],
+            "default": 0.0
+          },
+          "WeightUnit": {
+            "$id": "#root/Pieces/items/WeightUnit",
+            "title": "Weightunit",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "lbs"
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    },
+    "Events": {
+      "$id": "#root/Events",
+      "title": "Events",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/Events/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "DateTime",
+          "UTCDateTime",
+          "City",
+          "State",
+          "PostalCode",
+          "Country",
+          "EventType",
+          "EventModifier",
+          "EventLabel",
+          "EventShortText",
+          "EventLongText",
+          "Signature",
+          "Signature2",
+          "Location",
+          "Reason"
+        ],
+        "properties": {
+          "DateTime": {
+            "$id": "#root/Events/items/DateTime",
+            "title": "Datetime",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "2021-07-24T20:13:43"
+            ],
+            "pattern": "^.*$"
+          },
+          "UTCDateTime": {
+            "$id": "#root/Events/items/UTCDateTime",
+            "title": "Utcdatetime",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "2021-07-25T00:13:43"
+            ],
+            "pattern": "^.*$"
+          },
+          "City": {
+            "$id": "#root/Events/items/City",
+            "title": "City",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "LAKE WORTH"
+            ],
+            "pattern": "^.*$"
+          },
+          "State": {
+            "$id": "#root/Events/items/State",
+            "title": "State",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "FL"
+            ],
+            "pattern": "^.*$"
+          },
+          "PostalCode": {
+            "$id": "#root/Events/items/PostalCode",
+            "title": "Postalcode",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "33460"
+            ],
+            "pattern": "^.*$"
+          },
+          "Country": {
+            "$id": "#root/Events/items/Country",
+            "title": "Country",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "US"
+            ],
+            "pattern": "^.*$"
+          },
+          "EventType": {
+            "$id": "#root/Events/items/EventType",
+            "title": "Eventtype",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Delivered"
+            ],
+            "pattern": "^.*$"
+          },
+          "EventModifier": {
+            "$id": "#root/Events/items/EventModifier",
+            "title": "Eventmodifier",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "DLVD"
+            ],
+            "pattern": "^.*$"
+          },
+          "EventLabel": {
+            "$id": "#root/Events/items/EventLabel",
+            "title": "Eventlabel",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Delivered"
+            ],
+            "pattern": "^.*$"
+          },
+          "EventShortText": {
+            "$id": "#root/Events/items/EventShortText",
+            "title": "Eventshorttext",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Package Delivered"
+            ],
+            "pattern": "^.*$"
+          },
+          "EventLongText": {
+            "$id": "#root/Events/items/EventLongText",
+            "title": "Eventlongtext",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Your package has been delivered"
+            ],
+            "pattern": "^.*$"
+          },
+          "Signature": {
+            "$id": "#root/Events/items/Signature",
+            "title": "Signature",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^.*$"
+          },
+          "Signature2": {
+            "$id": "#root/Events/items/Signature2",
+            "title": "Signature2",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^.*$"
+          },
+          "Location": {
+            "$id": "#root/Events/items/Location",
+            "title": "Location",
+            "type": "string",
+            "default": "",
+            "examples": [
+              "Front Door"
+            ],
+            "pattern": "^.*$"
+          },
+          "Reason": {
+            "$id": "#root/Events/items/Reason",
+            "title": "Reason",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    }
+  }
+}

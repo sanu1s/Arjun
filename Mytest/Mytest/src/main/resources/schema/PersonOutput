@@ -1,0 +1,44 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627149105.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "Myname",
+    "MyAge",
+    "PhoneNumber"
+  ],
+  "properties": {
+    "Myname": {
+      "$id": "#root/Myname",
+      "title": "Myname",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^.*$"
+    },
+    "MyAge": {
+      "$id": "#root/MyAge",
+      "title": "Myage",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^.*$"
+    },
+    "PhoneNumber": {
+      "$id": "#root/PhoneNumber",
+      "title": "Phonenumber",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

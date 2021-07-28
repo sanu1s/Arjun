@@ -1,0 +1,461 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627342189.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "object",
+      "required": [
+        "trackingNumber",
+        "carrier",
+        "shipment",
+        "trackingSummary",
+        "trackingDetails"
+      ],
+      "properties": {
+        "trackingNumber": {
+          "$id": "#root/data/trackingNumber",
+          "title": "Trackingnumber",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "1Z4E6764YW75315296"
+          ],
+          "pattern": "^.*$"
+        },
+        "carrier": {
+          "$id": "#root/data/carrier",
+          "title": "Carrier",
+          "type": "object",
+          "required": [
+            "code",
+            "name",
+            "carrier",
+            "carrierCode",
+            "description"
+          ],
+          "properties": {
+            "code": {
+              "$id": "#root/data/carrier/code",
+              "title": "Code",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "093"
+              ],
+              "pattern": "^.*$"
+            },
+            "name": {
+              "$id": "#root/data/carrier/name",
+              "title": "Name",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "UPS"
+              ],
+              "pattern": "^.*$"
+            },
+            "carrier": {
+              "$id": "#root/data/carrier/carrier",
+              "title": "Carrier",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "UPS SurePost"
+              ],
+              "pattern": "^.*$"
+            },
+            "carrierCode": {
+              "$id": "#root/data/carrier/carrierCode",
+              "title": "Carriercode",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "093"
+              ],
+              "pattern": "^.*$"
+            },
+            "description": {
+              "$id": "#root/data/carrier/description",
+              "title": "Description",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "UPS SurePost"
+              ],
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "shipment": {
+          "$id": "#root/data/shipment",
+          "title": "Shipment",
+          "type": "object",
+          "required": [
+            "shipper",
+            "shipTo",
+            "package"
+          ],
+          "properties": {
+            "shipper": {
+              "$id": "#root/data/shipment/shipper",
+              "title": "Shipper",
+              "type": "object",
+              "required": [
+                "addressLines",
+                "city",
+                "state",
+                "postalCode",
+                "country"
+              ],
+              "properties": {
+                "addressLines": {
+                  "$id": "#root/data/shipment/shipper/addressLines",
+                  "title": "Addresslines",
+                  "type": "array",
+                  "default": [],
+                  "items":{
+                    "$id": "#root/data/shipment/shipper/addressLines/items",
+                    "title": "Items",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "4600 SONOMA COVE"
+                    ],
+                    "pattern": "^.*$"
+                  }
+                },
+                "city": {
+                  "$id": "#root/data/shipment/shipper/city",
+                  "title": "City",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "MEMPHIS"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "state": {
+                  "$id": "#root/data/shipment/shipper/state",
+                  "title": "State",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "TN"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "postalCode": {
+                  "$id": "#root/data/shipment/shipper/postalCode",
+                  "title": "Postalcode",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "381186910"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "country": {
+                  "$id": "#root/data/shipment/shipper/country",
+                  "title": "Country",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "US"
+                  ],
+                  "pattern": "^.*$"
+                }
+              }
+            }
+          ,
+            "shipTo": {
+              "$id": "#root/data/shipment/shipTo",
+              "title": "Shipto",
+              "type": "object",
+              "required": [
+                "city",
+                "state",
+                "postalCode",
+                "country"
+              ],
+              "properties": {
+                "city": {
+                  "$id": "#root/data/shipment/shipTo/city",
+                  "title": "City",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "THOMPSONS STN"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "state": {
+                  "$id": "#root/data/shipment/shipTo/state",
+                  "title": "State",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "TN"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "postalCode": {
+                  "$id": "#root/data/shipment/shipTo/postalCode",
+                  "title": "Postalcode",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "37179"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "country": {
+                  "$id": "#root/data/shipment/shipTo/country",
+                  "title": "Country",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "US"
+                  ],
+                  "pattern": "^.*$"
+                }
+              }
+            }
+          ,
+            "package": {
+              "$id": "#root/data/shipment/package",
+              "title": "Package",
+              "type": "object",
+              "required": [
+                "weight"
+              ],
+              "properties": {
+                "weight": {
+                  "$id": "#root/data/shipment/package/weight",
+                  "title": "Weight",
+                  "type": "object",
+                  "required": [
+                    "weight",
+                    "unit"
+                  ],
+                  "properties": {
+                    "weight": {
+                      "$id": "#root/data/shipment/package/weight/weight",
+                      "title": "Weight",
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "4.60"
+                      ],
+                      "pattern": "^.*$"
+                    },
+                    "unit": {
+                      "$id": "#root/data/shipment/package/weight/unit",
+                      "title": "Unit",
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "LBS"
+                      ],
+                      "pattern": "^.*$"
+                    }
+                  }
+                }
+
+              }
+            }
+
+          }
+        }
+      ,
+        "trackingSummary": {
+          "$id": "#root/data/trackingSummary",
+          "title": "Trackingsummary",
+          "type": "object",
+          "required": [
+            "activityTime",
+            "description",
+            "delivered",
+            "status",
+            "location"
+          ],
+          "properties": {
+            "activityTime": {
+              "$id": "#root/data/trackingSummary/activityTime",
+              "title": "Activitytime",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "2021-04-29T10:38:39"
+              ],
+              "pattern": "^.*$"
+            },
+            "description": {
+              "$id": "#root/data/trackingSummary/description",
+              "title": "Description",
+              "type": "string",
+              "default": "",
+              "examples": [
+                "CARPENTER"
+              ],
+              "pattern": "^.*$"
+            },
+            "delivered": {
+              "$id": "#root/data/trackingSummary/delivered",
+              "title": "Delivered",
+              "type": "boolean",
+              "examples": [
+                false
+              ],
+              "default": true
+            },
+            "status": {
+              "$id": "#root/data/trackingSummary/status",
+              "title": "Status",
+              "type": "object",
+              "required": [
+                "code",
+                "description"
+              ],
+              "properties": {
+                "code": {
+                  "$id": "#root/data/trackingSummary/status/code",
+                  "title": "Code",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "I"
+                  ],
+                  "pattern": "^.*$"
+                },
+                "description": {
+                  "$id": "#root/data/trackingSummary/status/description",
+                  "title": "Description",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Package transferred to post office"
+                  ],
+                  "pattern": "^.*$"
+                }
+              }
+            }
+          ,
+            "location": {
+              "$id": "#root/data/trackingSummary/location",
+              "title": "Location",
+              "type": "object",
+              "required": [
+              ],
+              "properties": {
+              }
+            }
+
+          }
+        }
+      ,
+        "trackingDetails": {
+          "$id": "#root/data/trackingDetails",
+          "title": "Trackingdetails",
+          "type": "array",
+          "default": [],
+          "items":{
+            "$id": "#root/data/trackingDetails/items",
+            "title": "Items",
+            "type": "object",
+            "required": [
+              "activityTime",
+              "description",
+              "delivered",
+              "status",
+              "location"
+            ],
+            "properties": {
+              "activityTime": {
+                "$id": "#root/data/trackingDetails/items/activityTime",
+                "title": "Activitytime",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "2021-04-29T10:38:39"
+                ],
+                "pattern": "^.*$"
+              },
+              "description": {
+                "$id": "#root/data/trackingDetails/items/description",
+                "title": "Description",
+                "type": "string",
+                "default": "",
+                "examples": [
+                  "Package transferred to post office"
+                ],
+                "pattern": "^.*$"
+              },
+              "delivered": {
+                "$id": "#root/data/trackingDetails/items/delivered",
+                "title": "Delivered",
+                "type": "boolean",
+                "examples": [
+                  false
+                ],
+                "default": true
+              },
+              "status": {
+                "$id": "#root/data/trackingDetails/items/status",
+                "title": "Status",
+                "type": "object",
+                "required": [
+                  "code",
+                  "description"
+                ],
+                "properties": {
+                  "code": {
+                    "$id": "#root/data/trackingDetails/items/status/code",
+                    "title": "Code",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "I"
+                    ],
+                    "pattern": "^.*$"
+                  },
+                  "description": {
+                    "$id": "#root/data/trackingDetails/items/status/description",
+                    "title": "Description",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "Package transferred to post office"
+                    ],
+                    "pattern": "^.*$"
+                  }
+                }
+              }
+            ,
+              "location": {
+                "$id": "#root/data/trackingDetails/items/location",
+                "title": "Location",
+                "type": "object",
+                "required": [
+                ],
+                "properties": {
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}

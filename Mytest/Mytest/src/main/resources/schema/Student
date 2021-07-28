@@ -1,0 +1,50 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627328995.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "courses"
+  ],
+  "properties": {
+    "courses": {
+      "$id": "#root/courses",
+      "title": "Courses",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/courses/items",
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "name",
+          "fees"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#root/courses/items/name",
+            "title": "Name",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^.*$"
+          },
+          "fees": {
+            "$id": "#root/courses/items/fees",
+            "title": "Fees",
+            "type": "string",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    }
+  }
+}

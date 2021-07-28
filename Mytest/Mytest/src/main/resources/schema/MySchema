@@ -1,0 +1,66 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1627144156.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "object",
+      "required": [
+        "name",
+        "age",
+        "salary",
+        "employeeId"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#root/data/name",
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^.*$"
+        },
+        "age": {
+          "$id": "#root/data/age",
+          "title": "Age",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^.*$"
+        },
+        "salary": {
+          "$id": "#root/data/salary",
+          "title": "Salary",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^.*$"
+        },
+        "employeeId": {
+          "$id": "#root/data/employeeId",
+          "title": "Employeeid",
+          "type": "string",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+
+  }
+}
